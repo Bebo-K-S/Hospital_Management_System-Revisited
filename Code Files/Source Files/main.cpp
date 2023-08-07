@@ -1,21 +1,27 @@
 /*Include source files*/
 #include "login_page.cpp"
+#include "admin_page.cpp"
 
 int main()
 {
-    int* scene = new int(0);
+    int* scene = new int(0); 
+
+    RenderWindow window(VideoMode(1600, 900), "HMS");
+    window.setVerticalSyncEnabled(true);
 
     Admin admin;
 
     while (*scene != -1)
     {
-        // A switch case that will switch between the different scenes
-        // present in the program by passing the pointer int to those
-        // different scene functions where it'll change accordingly
         switch (*scene)
         {
             case 0: // Login page
-                runLoginScreen(scene, &admin);
+                runLoginScreen(scene, &admin, &window);
+                window.clear();
+                break;
+            case 1:
+                runAdminPage(scene, &admin, &window);
+                window.clear();
                 break;
             /*
               .
