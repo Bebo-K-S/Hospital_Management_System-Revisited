@@ -104,7 +104,7 @@ inline void runLoginScreen(int* scene, Admin *admin)
             {
                 if (event.key.code == Keyboard::Return || loginText.getGlobalBounds().contains(Mouse::getPosition(window).x, Mouse::getPosition(window).y))
                 {
-                    if (usernameInput == "ADMIN" && passwordInput == "5218550")
+                    if (usernameInput == "ADMIN" && passwordInput == "123") // 5218550
                     {
                         cout << "Login successful" << endl;
                         *scene = -1; // Admin's Page
